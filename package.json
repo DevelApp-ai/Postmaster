@@ -1,0 +1,23 @@
+{
+  "name": "postmaster",
+  "version": "1.0.0",
+  "description": "Real-time messaging system with C# backend and React frontend",
+  "scripts": {
+    "dev:backend": "cd backend/Postmaster.Api && dotnet run --urls=\"http://localhost:5000\"",
+    "dev:frontend": "cd frontend && npm start",
+    "build:backend": "cd backend/Postmaster.Api && dotnet build",
+    "build:frontend": "cd frontend && npm run build",
+    "build": "npm run build:backend && npm run build:frontend",
+    "install:frontend": "cd frontend && npm install",
+    "clean:backend": "cd backend/Postmaster.Api && dotnet clean",
+    "clean:frontend": "cd frontend && rm -rf node_modules dist",
+    "clean": "npm run clean:backend && npm run clean:frontend"
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  },
+  "keywords": ["signalr", "react", "typescript", "messaging", "real-time"],
+  "author": "DevelApp.ai",
+  "license": "MIT"
+}
+
